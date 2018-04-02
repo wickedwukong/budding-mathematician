@@ -61,7 +61,7 @@ under10Generator : Seed -> String -> BasicQuestion
 under10Generator seed operator =
    let
       (x, seed0) = Random.step (int 0 10) seed
-      (y, seed1) = Random.step (int 0 10) seed0
+      (y, seed1) = Random.step (int 0 10) seed
    in BasicQuestion x y operator seed1
 
 under100Generator : Seed -> String -> BasicQuestion
@@ -165,11 +165,7 @@ viewQuestionItem q =
        [ div [class "siimple-table-cell"] [text (toString q.x ++ q.operator ++ toString q.y ++ "=" ++ toString q.answer)]
        , div [class "siimple-table-cell"] [showFeedback q, showSolutionIfAnswerIsWrong q]
        ]
-  -- li []
-  --  [ span [] [text (toString q.x ++ q.operator ++ toString q.y ++ "=" ++ toString q.answer)]
-  --  , span [] [showFeedback q]
-  --  ]
-  --
+
 viewHistory : List Question -> Html Msg
 viewHistory questions =
   let
@@ -178,8 +174,6 @@ viewHistory questions =
   in
   div [class "siimple-table"]
        [div [class "siimple-table-body siimple-table--border"] listOfQuestions]
-  -- ul [] listOfQuestions
-
 
 
 viewHeader : String -> Html msg
@@ -233,9 +227,6 @@ showStats history =
       else
         let totalCorrectlyAnsweredQuestions = history |> List.filter (\q -> q.isSolutionCorrect) |> List.length
         in (((toFloat totalCorrectlyAnsweredQuestions) / (toFloat totalQuestionsAnswered) * 10000.0) |> round |> toFloat) / 100.0
-
-    -- totalCorrectlyAnsweredQuestions = history |> List.filter (\q -> q.isSolutionCorrect) |> List.length
-    -- accuracy = (((toFloat totalCorrectlyAnsweredQuestions) / (toFloat totalQuestionsAnswered) * 10000.0) |> round |> toFloat) / 100.0
   in
     div []
           [ div [] [text ("Total questions answered: " ++ toString totalQuestionsAnswered)]
