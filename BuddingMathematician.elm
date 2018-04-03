@@ -61,7 +61,7 @@ under10Generator : Seed -> String -> BasicQuestion
 under10Generator seed operator =
    let
       (x, seed0) = Random.step (int 0 10) seed
-      (y, seed1) = Random.step (int 0 10) seed
+      (y, seed1) = Random.step (int 1 10) seed0
    in BasicQuestion x y operator seed1
 
 under100Generator : Seed -> String -> BasicQuestion
