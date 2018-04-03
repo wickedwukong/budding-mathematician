@@ -1,0 +1,14 @@
+.large-input{
+  display: inline-block;
+  height: 40px;
+  line-height: 30px;
+  font-size: 36px;
+  color: #57607c;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border: 0px;
+  border-radius: 5px;
+  outline: 0px;
+  background-color: #ebf2fa; }

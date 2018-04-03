@@ -190,7 +190,7 @@ viewQuestion x operator y currentInput =
    , input
        [ type_ "text"
        , placeholder "What is your answer?"
-       , class "siimple-input"
+       , class "large-input"
        , value currentInput
        , autofocus True
        , onEnter Solution
