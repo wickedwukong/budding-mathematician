@@ -188,7 +188,7 @@ viewQuestion x operator y currentInput =
   div [class "siimple-h1"]
    [ text (toString x ++ operator ++ toString y ++ "=")
    , input
-       [ type_ "text"
+       [ type_ "number"
        , placeholder "What is your answer?"
        , class "large-input"
        , value currentInput
