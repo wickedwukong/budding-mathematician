@@ -201,7 +201,7 @@ viewQuestion x operator y currentInput =
 
 viewFooter =
   footer [class "siimple-footer"]
-      [a [href "https://github.com/wickedwukong/bingo"]
+      [a [href "https://github.com/wickedwukong/budding-mathematician"]
          [text "View source on Github"]
       ]
 
